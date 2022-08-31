@@ -1,26 +1,128 @@
 {
   "name": "pingfangx",
-  "displayName": "pingfangx",
-  "description": "Tools used by pingfangx.",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "publisher": "pingfangx",
   "engines": {
     "vscode": "^1.70.0"
   },
+  "displayName": "pingfangx",
+  "description": "pingfangx tools",
+  "icon": "images/icon_256.png",
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:pingfangx.helloWorld"
+  "keywords": [
+    "pingfangx",
+    "reference"
   ],
   "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:markdown",
+    "onCommand:pingfangx.reference.insert",
+    "onCommand:pingfangx.reference.delete",
+    "onCommand:pingfangx.reference.increase",
+    "onCommand:pingfangx.reference.decrease"
+  ],
   "contributes": {
     "commands": [
       {
-        "command": "pingfangx.helloWorld",
-        "title": "Hello World"
+        "command": "pingfangx.reference.insert",
+        "title": "%command.reference.insert.title%",
+        "category": "pingfangx"
+      },
+      {
+        "command": "pingfangx.reference.delete",
+        "title": "%command.reference.delete.title%",
+        "category": "pingfangx"
+      },
+      {
+        "command": "pingfangx.reference.increase",
+        "title": "%command.reference.increase.title%",
+        "category": "pingfangx"
+      },
+      {
+        "command": "pingfangx.reference.decrease",
+        "title": "%command.reference.decrease.title%",
+        "category": "pingfangx"
       }
-    ]
+    ],
+    "keybindings": [
+      {
+        "command": "pingfangx.reference.insert",
+        "key": "ctrl+alt+x r"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceLangId == markdown",
+          "command": "pingfangx.reference.insert",
+          "group": "z_commands@1"
+        },
+        {
+          "when": "resourceLangId == markdown",
+          "command": "pingfangx.reference.delete",
+          "group": "z_commands@2"
+        },
+        {
+          "when": "resourceLangId == markdown",
+          "command": "pingfangx.reference.increase",
+          "group": "z_commands@3"
+        },
+        {
+          "when": "resourceLangId == markdown",
+          "command": "pingfangx.reference.decrease",
+          "group": "z_commands@4"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "pingfangx",
+      "properties": {
+        "pingfangx.reference.title": {
+          "order": 1,
+          "type": "string",
+          "default": "default",
+          "enum": [
+            "default",
+            "en",
+            "zh",
+            "custom"
+          ],
+          "enumDescriptions": [
+            "%config.reference.title.default%",
+            "%config.reference.title.en%",
+            "%config.reference.title.zh%",
+            "%config.reference.title.custom%"
+          ],
+          "description": "%config.reference.title%"
+        },
+        "pingfangx.reference.customTitle": {
+          "order": 2,
+          "type": "string",
+          "default": "",
+          "description": "%config.reference.title.custom%"
+        }
+      }
+    }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pingfangx/vscodex"
+  },
+  "bugs": {
+    "url": "https://github.com/pingfangx/vscodex/issues"
+  },
+  "qna": "https://github.com/pingfangx/vscodex/wiki",
+  "sponsor": {
+    "url": "https://github.com/pingfangx/vscodex"
+  },
+  "author": {
+    "name": "pingfangx",
+    "email": "pingfangx@pingfangx.com",
+    "url": "https://www.pingfangx.com"
+  },
+  "homepage": "https://www.pingfangx.com",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
