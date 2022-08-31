@@ -1,0 +1,11 @@
+{
+  "command.reference.insert.title": "Insert Reference Index",
+  "command.reference.delete.title": "Delete Reference Index",
+  "command.reference.increase.title": "Increase Reference Index",
+  "command.reference.decrease.title": "Decrease Reference Index",
+  "config.reference.title": "Reference Title",
+  "config.reference.title.default": "Default follow the vscode language",
+  "config.reference.title.en": "Use References",
+  "config.reference.title.zh": "Use 参考文献",
+  "config.reference.title.custom": "Use custom title when it is not empty"
+}

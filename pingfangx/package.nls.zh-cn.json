@@ -1,0 +1,11 @@
+{
+  "command.reference.insert.title": "插入参考文献序号",
+  "command.reference.delete.title": "删除参考文献序号",
+  "command.reference.increase.title": "增大参考文献序号",
+  "command.reference.decrease.title": "减小参考文献序号",
+  "config.reference.title": "参考文献标题",
+  "config.reference.title.default": "默认跟随 vscode 的语言",
+  "config.reference.title.en": "使用 References",
+  "config.reference.title.zh": "使用 参考文献",
+  "config.reference.title.custom": "当自定义标题不为空时，使用其值"
+}
