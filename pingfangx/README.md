@@ -1,5 +1,5 @@
 # pingfangx
-[English](README.md) | [中文](README.zh-CN.md)
+[English](https://github.com/pingfangx/vscodex/blob/master/pingfangx/README.md) | [中文](https://github.com/pingfangx/vscodex/blob/master/pingfangx/README.zh-CN.md)
 
 pingfangx tools.
 
@@ -9,7 +9,7 @@ pingfangx tools.
 * Insert or delete reference index.
 * Increase or decrease reference index.
 
-![reference](https://github.com/pingfangx/vscodex/blob/master/screenshots/reference.png)
+![reference](https://github.com/pingfangx/vscodex/raw/master/pingfangx/screenshots/reference.png)
 
 ## Extension Settings
 * `reference.title`: The title when insert reference, en(References), zh(参考文献), default(follow the vscode language) or custom.
